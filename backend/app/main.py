@@ -3,9 +3,11 @@ from app.middleware.audit import AuditMiddleware
 from app.routers import (
     audit,
     auth,
+    costs,
     feedbacks,
     materials,
     projects,
+    reports,
     upload,
     users,
     versions,
@@ -22,8 +24,10 @@ app.include_router(projects.router)
 app.include_router(workspace.router)
 app.include_router(feedbacks.router)
 app.include_router(versions.router)
+app.include_router(costs.router)
 app.include_router(audit.router)
 app.include_router(upload.router)
+app.include_router(reports.router)
 app.include_router(users.router)
 
 
