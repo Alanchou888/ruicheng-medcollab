@@ -5,9 +5,12 @@ from app.routers import (
     auth,
     costs,
     feedbacks,
+    join_us_applications,
     materials,
     products,
     projects,
+    public_ai,
+    public_site_content,
     reports,
     upload,
     users,
@@ -31,6 +34,9 @@ app.include_router(upload.router)
 app.include_router(reports.router)
 app.include_router(users.router)
 app.include_router(products.router)
+app.include_router(public_site_content.router)
+app.include_router(public_ai.router)
+app.include_router(join_us_applications.router)
 
 
 @app.get("/health")
