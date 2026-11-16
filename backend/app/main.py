@@ -7,6 +7,7 @@ from app.routers import (
     upload,
     users,
     versions,
+    workspace,
 )
 
 app = FastAPI(title="睿程生醫 API", version="0.1.0")
@@ -14,6 +15,7 @@ app = FastAPI(title="睿程生醫 API", version="0.1.0")
 app.include_router(auth.router)
 app.include_router(materials.router)
 app.include_router(projects.router)
+app.include_router(workspace.router)
 app.include_router(feedbacks.router)
 app.include_router(versions.router)
 app.include_router(upload.router)
