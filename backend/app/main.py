@@ -6,6 +6,7 @@ from app.routers import (
     costs,
     feedbacks,
     materials,
+    products,
     projects,
     reports,
     upload,
@@ -29,6 +30,7 @@ app.include_router(audit.router)
 app.include_router(upload.router)
 app.include_router(reports.router)
 app.include_router(users.router)
+app.include_router(products.router)
 
 
 @app.get("/health")
